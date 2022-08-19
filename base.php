@@ -11,7 +11,7 @@ class DB{
     public function __construct($table)
     {
         $this->table=$table;
-        $this->pdo=new PDO($this->dsn,$this->pw,$this->user);
+        $this->pdo=new PDO($this->dsn,$this->user,$this->pw);
     }
 
     public function find($id){
@@ -41,9 +41,9 @@ class DB{
                     foreach ($arg[0] as $key => $value) {
                         $tmp[]="`$key`='$value'";
                     }
-                    $sql.=" WHERE ".implode(" AND ",$tmp);
+                    $sql.= " WHERE ".implode(" AND ",$tmp);
                 }else{
-                    $sql.=$arg[0];
+                    $sql.= $arg[0];
                 }
                 break;
         }
@@ -107,5 +107,7 @@ class DB{
         echo "</pre>";
 
     }
+
 }
-?>
+$Project=new DB('project');
+$Img=new DB('img');

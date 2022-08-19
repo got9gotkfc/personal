@@ -33,7 +33,18 @@
 </head>
 
 <body>
+<?php
+include_once "base.php";
+$name=['name'=>$_GET['do']];
+$project=$Project->find($name);
+$num=['num'=>$project['num']];
+$img=$Img->all($num);
 
+for ($i=0; $i <count($img) ; $i++) { 
+  $file[$i]='assets/img/'.$img[$i]['file'].'/'.$img[$i]['name'];
+}
+
+?>
   <main id="main">
 
     <!-- ======= Portfolio Details ======= -->
@@ -43,21 +54,21 @@
         <div class="row">
 
           <div class="col-lg-8">
-            <h2 class="portfolio-title">This is an example of portfolio detail</h2>
+            <h2 class="portfolio-title"><?=$project['name'];?></h2>
 
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
+                  <img src=<?=$file[0];?> width="750">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
+                  <img src=<?=$file[1];?> width="750">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
+                  <img src=<?=$file[2];?> width="750">
                 </div>
 
               </div>
@@ -67,16 +78,15 @@
           </div>
 
           <div class="col-lg-4 portfolio-info">
-            <h3>Project information</h3>
+            <h3><?=$project['name'];?> 簡介</h3>
             <ul>
-              <li><strong>Category</strong>: Web design</li>
-              <li><strong>Client</strong>: ASU Company</li>
-              <li><strong>Project date</strong>: 01 March, 2020</li>
-              <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              <li><strong>類別</strong>:<?=$project['type'];?></li>
+              <li><strong>製作日期</strong>: <?=$project['date'];?></li>
+              <li><strong>作品網站</strong>: <a href=<?=$project['web'];?>><?=$project['web'];?></a></li>
             </ul>
 
             <p>
-              Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              <?=$project['introduce'];?>
             </p>
           </div>
 
@@ -87,13 +97,7 @@
 
   </main><!-- End #main -->
 
-  <div class="credits">
-    <!-- All the links in the footer should remain intact. -->
-    <!-- You can delete the links only if you purchased the pro version. -->
-    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
-    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-  </div>
+  
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
