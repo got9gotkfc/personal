@@ -103,7 +103,7 @@ ctx.translate(ww/2,wh/2)
 ctx.beginPath()
 ctx.shadowBlur="10"
 ctx.shadowColor="white"
-ctx.arc(3*ww/8,3*(-wh/8),ww/16,0,2*Math.PI)
+ctx.arc(3*ww/8,3*(-wh/8)+50,ww/16,0,2*Math.PI)
 ctx.fillStyle="rgba(255,255,255,1)"
 ctx.fill()
 ctx.strokeStyle="rgba(255,255,255,1)"
@@ -132,7 +132,7 @@ ctx.restore()
 ctx.save()
 ctx.translate(ww/2,wh/2)
 ctx.beginPath()
-ctx.arc(3*ww/8-ww/16+30,3*(-wh/8),ww/16,0,2*Math.PI)
+ctx.arc(3*ww/8-ww/16+30,3*(-wh/8)+50,ww/16,0,2*Math.PI)
 ctx.fillStyle="rgba(0,0,0,1)"
 ctx.fill()
 ctx.strokeStyle="rgba(0,0,0,1)"
