@@ -94,7 +94,7 @@
             <div class="col-lg-12">
               <ul>
                 <li><i class="bi bi-chevron-right"></i> <strong>生日:</strong> <span>1992/01/19</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>個人網站:</strong><span>http://220.128.133.15/s1110216/Personal/index.html</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>個人網站:</strong><span>http://220.128.133.15/s1110216/Personal/index.php</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>電話</strong> <span>0966678326</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>居住地</strong> <span>新北市/台北市</span></li>
                 <li><i class="bi bi-chevron-right"></i> <strong>年齡:</strong> <span>30</span></li>
