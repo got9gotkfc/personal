@@ -527,7 +527,19 @@
           </div>
         </div>
 
-        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/exam/exam-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>PHP-3</h4>
+              <p>乙級檢定第二題</p>
+              <div class="portfolio-links">
+                <a href="assets/img/exam/exam-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" ><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.php?do=exam" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" class="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
 
